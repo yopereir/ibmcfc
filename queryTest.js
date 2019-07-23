@@ -7,13 +7,13 @@
 const { FileSystemWallet, Gateway } = require('fabric-network');
 const path = require('path');
 
-const ccpPath = path.resolve(__dirname, 'config', 'channel1_auction_profile.json');
+const ccpPath = path.resolve(__dirname, 'config', 'connection.json');
 
 async function main() {
     try {
 
         // Create a new file system based wallet for managing identities.
-        const walletPath = path.join(process.cwd(), 'wallet');
+        const walletPath = path.join(process.cwd(), 'config','wallet');
         const wallet = new FileSystemWallet(walletPath);
         console.log(`Wallet path: ${walletPath}`);
 
@@ -38,7 +38,7 @@ async function main() {
         // Evaluate the specified transaction.
         // queryCar transaction - requires 1 argument, ex: ('queryCar', 'CAR4')
         // queryAllCars transaction - requires no arguments, ex: ('queryAllCars')
-        let result = await contract.evaluateTransaction('intiateAuction', 1 , 13210, 13210);
+        let result = await contract.evaluateTransaction('intiateAuction', "1" , "13210", "13210");
         console.log(`Transaction has been evaluated, result is: ${result.toString()}`);
         result = await contract.evaluateTransaction('getAuctionInfo', 1 );
         console.log(`Transaction has been evaluated, result is: ${result.toString()}`);

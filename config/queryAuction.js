@@ -39,6 +39,8 @@ async function main() {
     await contract.submitTransaction('bid','1','1500','Jim','669');
     result = await contract.submitTransaction('getAuctionInfo','1');
     console.log(result.toString());
+    result = await contract.submitTransaction('getLowestBid','1');
+    console.log(result.toString());
 
     await gateway.disconnect();
 

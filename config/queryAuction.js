@@ -31,7 +31,7 @@ async function main() {
     // Submit the 'createCar' transaction to the smart contract, and wait for it
     // to be committed to the ledger.
     if(await contract.submitTransaction('doesAuctionExist','1')) await contract.submitTransaction('closeAuction','1');
-    let result = await contract.submitTransaction('initiateAuction','1','13210','13220');
+    let result = await contract.submitTransaction('initiateAuction','1','13210','13220','1594264040629');
     await contract.submitTransaction('bid','1','1000','Bob','666');
     await contract.submitTransaction('bid','1','2000','Alice','667');
     await contract.submitTransaction('bid','1','500','Duke','668');

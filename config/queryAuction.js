@@ -46,7 +46,7 @@ async function main() {
     await contract.submitTransaction('editAuctionEndDate','1','0');
     result = await contract.submitTransaction('getAuctionInfo','1');
     console.log(result.toString());
-    await contract.submitTransaction('bid','1','500','Duke','668');
+    await contract.submitTransaction('bid','1','3500','John','665');
     
     await gateway.disconnect();
 

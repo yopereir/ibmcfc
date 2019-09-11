@@ -5,7 +5,7 @@
 'use strict';
 
 const { ChaincodeStub, ClientIdentity } = require('fabric-shim');
-const { MyAssetContract } = require('..');
+            const { MyAssetContract }=require('..');
 const winston = require('winston');
 
 const chai = require('chai');
